@@ -1,0 +1,255 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{caption}
+
+% Page Setup
+\geometry{margin=1in}
+
+\begin{document}
+
+% --- Title Page ---
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    
+    {\Huge \textbf{Electron Diffraction}\par}
+    
+    \vspace{1.5cm}
+    
+    {\Large Animesh Pradhan \\ 24551\par}
+    
+    \vspace{1.5cm}
+    
+    {\large \today\par}
+    
+    \vspace*{\fill}
+\end{titlepage}
+
+\section{Brief Introduction}
+
+This experiment employs electron diffraction to ascertain the lattice parameters of a polycrystalline graphite sample and to validate the de Broglie hypothesis. De Broglie proposed that matter possesses wave-like properties, with a wavelength defined by:
+
+\begin{equation*}
+    \lambda = \frac{h}{mv}
+\end{equation*}
+
+When an electron is accelerated across a potential difference $V$, its wavelength is described as:
+
+\begin{equation*}
+    \lambda = \frac{h}{\sqrt{2mVe}}
+\end{equation*}
+
+To test this hypothesis, we apply Bragg's law of diffraction:
+
+\begin{equation*}
+    2d \sin \theta = n\lambda
+\end{equation*}
+
+The diffraction angle $\theta$ is derived by measuring the diameter of the observed concentric rings. Based on the geometric arrangement, this is calculated as:
+
+\begin{equation*}
+    \theta = \frac{1}{2} \tan^{-1} \left(\frac{D}{2L}\right)
+\end{equation*}
+
+\section{Prelab}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/Electron Diffraction/prelab/1.jpg}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/Electron Diffraction/prelab/2.jpg}
+\end{figure}
+
+\subsection{Data}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/Electron Diffraction/data/data.jpg}
+\end{figure}
+
+\section{Graphs}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/Electron Diffraction/graph/lambda_theo_plot.png}
+    \caption{Plot of $\lambda_{theo}$ vs $\sin(\theta_2)$}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/Electron Diffraction/graph/lambda_exp_plot.png}
+    \caption{Plot of $\lambda_{exp}$ vs $\sin(\theta_2)$}
+\end{figure}
+
+\section{Analysis}
+
+\subsection{Verification of de Broglie Hypothesis}
+To verify the hypothesis, we compare the theoretical de Broglie wavelength ($\lambda_{theo}$) with the experimental wavelength ($\lambda_{exp}$) derived from the diffraction pattern of the first ring ($D_1$).
+
+The theoretical wavelength is calculated using the accelerating voltage $V$:
+\begin{equation}
+    \lambda_{theo} = \frac{h}{\sqrt{2m_e e V}} \approx \frac{12.27}{\sqrt{V_{k}}} \, \text{\AA}
+\end{equation}
+
+The experimental wavelength is determined using Bragg's Law:
+\begin{equation}
+    \lambda_{exp} = 2d_1 \sin(\theta_1)
+\end{equation}
+where $d_1 = 2.13 \, \text{\AA}$ (inter-planar distance for graphite) and the diffraction angle $\theta_1$ is derived from the ring radius $r_1$ and the distance $L = 14.0 \, \text{cm}$:
+\begin{equation}
+    \theta_1 = \frac{1}{2} \tan^{-1}\left(\frac{r_1}{L}\right)
+\end{equation}
+
+The results are summarized in Table \ref{tab:verification}.
+
+\begin{table}[h!]
+    \centering
+    \caption{Experimental Verification of de Broglie Hypothesis}
+    \label{tab:verification}
+    \begin{tabular}{ccccccc}
+        \toprule
+        Voltage & $r_1$ & $\lambda_{theo}$ & $\theta_1$ & $\sin(\theta_1)$ & $\lambda_{exp}$ & \% Error \\
+        (kV) & (mm) & (\AA) & (rad) & & (\AA) & \\
+        \midrule
+        2.0 & 17.54 & 0.274 & 0.0623 & 0.0623 & 0.265 & 3.28\% \\
+        2.5 & 15.81 & 0.245 & 0.0562 & 0.0562 & 0.239 & 2.45\% \\
+        3.0 & 14.00 & 0.224 & 0.0498 & 0.0498 & 0.212 & 5.35\% \\
+        3.5 & 13.02 & 0.207 & 0.0463 & 0.0463 & 0.197 & 4.83\% \\
+        4.0 & 12.27 & 0.194 & 0.0437 & 0.0437 & 0.186 & 4.12\% \\
+        4.5 & 11.80 & 0.183 & 0.0420 & 0.0420 & 0.179 & 2.19\% \\
+        5.0 & 11.36 & 0.173 & 0.0405 & 0.0405 & 0.172 & 0.58\% \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Clearly, the experimental wavelengths closely match the theoretical predictions, with percentage errors below 6\%, thus confirming the de Broglie hypothesis.
+
+\subsection{Determination of Inter-planar Distance $d_2$}
+The second diffraction ring corresponds to an unknown inter-planar distance $d_2$. According to Bragg's law ($n\lambda = 2d_2 \sin \theta_2$), a plot of $\lambda$ versus $\sin(\theta_2)$ yields a straight line with a slope equal to $2d_2$.
+
+The data for the second ring is compiled in Table \ref{tab:d2_data}, with $\lambda_{theo}$ and $\lambda_{exp}$ as before.
+\begin{table}[H]
+    \centering
+    \caption{Data for Determination of $d_2$}
+    \label{tab:d2_data}
+    \begin{tabular}{cccccc}
+        \toprule
+        Voltage (kV) & $r_2$ (mm) & $\theta_2$ (rad) & $\sin(\theta_2)$ & $\lambda_{theo}$ (\AA) & $\lambda_{exp}$ (\AA) \\
+        \midrule
+        2.0 & 29.23 & 0.1029 & 0.1027 & 0.274 & 0.265 \\
+        2.5 & 28.08 & 0.0989 & 0.0988 & 0.245 & 0.239 \\
+        3.0 & 25.00 & 0.0883 & 0.0882 & 0.224 & 0.212 \\
+        3.5 & 24.16 & 0.0854 & 0.0853 & 0.207 & 0.197 \\
+        4.0 & 21.38 & 0.0758 & 0.0757 & 0.194 & 0.186 \\
+        4.5 & 20.98 & 0.0744 & 0.0743 & 0.183 & 0.179 \\
+        5.0 & 19.90 & 0.0706 & 0.0705 & 0.173 & 0.172 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The plots of $\lambda$ versus $\sin(\theta_2)$ are shown in the Graphs section. According to Bragg's law, the relationship $\lambda = 2d_2 \sin(\theta_2)$ implies that a linear fit should yield a slope equal to $2d_2$.
+
+\subsubsection{Analysis Using Theoretical Wavelength}
+From the linear regression of $\lambda_{theo}$ versus $\sin(\theta_2)$, we obtain:
+\begin{itemize}
+    \item Slope: $(2.8444 \pm 0.2397)$ \AA
+    \item Intercept: $-0.0277$ \AA
+    \item $R^2 = 0.9657$
+\end{itemize}
+
+The inter-planar distance is determined from the slope:
+\begin{equation*}
+    d_2 = \frac{\text{slope}}{2} = \frac{2.8444}{2} = (1.422 \pm 0.120) \, \text{\AA}
+\end{equation*}
+
+\subsubsection{Analysis Using Experimental Wavelength}
+From the linear regression of $\lambda_{exp}$ versus $\sin(\theta_2)$, we obtain:
+\begin{itemize}
+    \item Slope: $(2.6842 \pm 0.2532)$ \AA
+    \item Intercept: $-0.0212$ \AA
+    \item $R^2 = 0.9574$
+\end{itemize}
+
+The inter-planar distance is:
+\begin{equation*}
+    d_2 = \frac{\text{slope}}{2} = \frac{2.6842}{2} = (1.342 \pm 0.127) \, \text{\AA}
+\end{equation*}
+
+Both analyses yield high $R^2$ values ($>0.95$), confirming excellent linear fits and validating Bragg's law. 
+
+The average inter-planar distance from both methods is:
+\begin{equation*}
+    d_2 = \frac{1.422 + 1.342}{2} = 1.382 \, \text{\AA}
+\end{equation*}
+The uncertainty is calculated as:
+\begin{equation*}
+    \Delta d_2 = \frac{0.120 + 0.127}{2} = 0.124 \, \text{\AA}
+\end{equation*}
+Thus, we have:
+\begin{equation*}
+    d_2 = (1.382 \pm 0.124) \, \text{\AA}
+\end{equation*}
+
+The known inter-planar spacing for the (1120) plane of graphite is approximately 1.23 \AA, which is reasonably close to our experimental results considering the uncertainty.
+
+\subsection{Error Analysis}
+
+The uncertainty in the experimental wavelength, $\Delta \lambda_{exp}$, is calculated using the propagation of errors from the measurement of the diffraction ring radius $r$.
+
+The relationship for wavelength is given by Bragg's Law:
+\begin{equation}
+    \lambda = 2 d_1 \sin \theta
+\end{equation}
+
+\begin{equation}
+    \Rightarrow \Delta \lambda = 2 d_1 \cos \theta \cdot \Delta \theta
+\end{equation}
+
+The diffraction angle $\theta$ is determined by the geometry of the setup:
+\begin{equation}
+    \theta = \frac{1}{2} \tan^{-1}\left(\frac{r}{L}\right)
+\end{equation}
+The uncertainty in $\theta$, denoted as $\Delta \theta$, depends on the uncertainty in the radius measurement ($\Delta r$) and the distance $L$. Assuming $L$ is constant relative to the variation in $r$:
+\begin{equation}
+    \Delta \theta \approx \frac{1}{2} \frac{1}{1 + (r/L)^2} \frac{\Delta r}{L}
+\end{equation}
+Here, $\Delta r$ is estimated as half the width of the diffraction ring (calculated from the spread in the raw inner/outer measurements).
+
+Table \ref{tab:error_analysis} summarizes the uncertainty calculations. The theoretical wavelength $\lambda_{theo}$ generally falls within the range $\lambda_{exp} \pm \Delta \lambda$, indicating the deviations are largely accounted for by measurement limitations.
+
+\begin{table}[h!]
+    \centering
+    \caption{Uncertainty Analysis for $\lambda_{exp}$}
+    \label{tab:error_analysis}
+    \begin{tabular}{cccccc}
+        \toprule
+        Voltage & $\Delta r$ (est) & $\Delta \theta$ & $\lambda_{exp}$ & $\Delta \lambda$ & $\lambda_{theo}$ \\
+        (kV) & (mm) & (rad) & (\AA) & (\AA) & (\AA) \\
+        \midrule
+        2.0 & 2.45 & 0.0087 & 0.265 & 0.037 & 0.274 \\
+        2.5 & 1.29 & 0.0046 & 0.239 & 0.020 & 0.245 \\
+        3.0 & 1.55 & 0.0055 & 0.212 & 0.024 & 0.224 \\
+        3.5 & 1.43 & 0.0051 & 0.197 & 0.022 & 0.207 \\
+        4.0 & 0.80 & 0.0029 & 0.186 & 0.012 & 0.194 \\
+        4.5 & 0.81 & 0.0029 & 0.179 & 0.012 & 0.183 \\
+        5.0 & 0.72 & 0.0026 & 0.172 & 0.011 & 0.173 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Conclusion}
+
+\begin{itemize}
+    \item The experiment successfully verified the de Broglie hypothesis, with experimental wavelengths closely matching theoretical predictions within a 6\% error margin.
+    \item The inter-planar distance $d_2$ for the second diffraction ring was determined to be approximately $1.382 \pm 0.124$ \AA, quite close to the known value of $1.23$ \AA\ for graphite.
+    \item Uncertainties in the experimental values of wavelengths were determined, with the theoretical values falling within the calculated error bounds. 
+    \item Measurement uncertainties, particularly in ring diameter and path length, were the primary sources of error.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,278 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{caption}
+
+% Page Setup
+\geometry{margin=1in}
+
+\begin{document}
+
+% --- Title Page ---
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    
+    {\Huge \textbf{Semiconductor Diode Characteristics}\par}
+    
+    \vspace{1.5cm}
+    
+    {\Large Animesh Pradhan \\ 24551\par}
+    
+    \vspace{1.5cm}
+    
+    {\large \today\par}
+    
+    \vspace*{\fill}
+\end{titlepage}
+
+\section{Prelab}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/semiconductor/prelab/prelab_1.jpg}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/semiconductor/prelab/prelab_2.jpg}
+\end{figure}
+
+\section{Graphs}
+
+\subsection{PN Junction Diodes}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/1N4007for.png}
+    \caption{1N4007 Forward Bias (Linear Scale)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/1N4007for_log.png}
+    \caption{1N4007 Ideality Factor Plot (Log-Linear Scale)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/1N4148for.png}
+    \caption{1N4148 Forward Bias (Linear Scale)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/1N4148for_log.png}
+    \caption{1N4148 Ideality Factor Plot (Log-Linear Scale)}
+\end{figure}
+
+\subsection{Transistor Junctions}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/beivch.png}
+    \caption{Base-Emitter Junction I-V Characteristic}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/beivch_log.png}
+    \caption{Base-Emitter Junction Ideality Factor Plot}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/bcivch.png}
+    \caption{Base-Collector Junction I-V Characteristic}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/bcivch_log.png}
+    \caption{Base-Collector Junction Ideality Factor Plot}
+\end{figure}
+
+\subsection{LED Characteristics}
+
+% IR LED
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/irled1.png}
+    \caption{IR LED I-V Characteristic}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/irled1_log.png}
+    \caption{IR LED Ideality Factor Plot}
+\end{figure}
+
+% Red LED
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/redled.png}
+    \caption{Red LED I-V Characteristic}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/redled_log.png}
+    \caption{Red LED Ideality Factor Plot}
+\end{figure}
+
+% Green LED
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/greled.png}
+    \caption{Green LED I-V Characteristic}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/greled_log.png}
+    \caption{Green LED Ideality Factor Plot}
+\end{figure}
+
+% Blue LED
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/bluled.png}
+    \caption{Blue LED I-V Characteristic}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/bluled_log.png}
+    \caption{Blue LED Ideality Factor Plot}
+\end{figure}
+
+% UV LED
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/uvled.png}
+    \caption{UV LED I-V Characteristic}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/uvled_log.png}
+    \caption{UV LED Ideality Factor Plot}
+\end{figure}
+
+\subsection{Transistor Output Characteristics}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/020Ic.png}
+    \caption{Transistor Output Characteristic ($I_B = 20 \mu A$)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/040Ic.png}
+    \caption{Transistor Output Characteristic ($I_B = 40 \mu A$)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/060Ic.png}
+    \caption{Transistor Output Characteristic ($I_B = 60 \mu A$)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/080Ic.png}
+    \caption{Transistor Output Characteristic ($I_B = 80 \mu A$)}
+\end{figure}
+
+\section{Analysis}
+
+\subsection{Determination of Ideality Factor ($\eta$)}
+To find the ideality factor, the natural logarithm of the current, $\ln(I)$, was plotted against the voltage $V$. Rearranging the diode equation for the forward bias region ($V \gg \eta kT/q$):
+\begin{equation}
+    \ln(I) = \frac{q}{\eta k T} V + \ln(I_s)
+\end{equation}
+The slope $m$ of the linear region of this graph relates to $\eta$ by:
+\begin{equation}
+    \eta = \frac{q}{m k T} \approx \frac{38.955}{m} \quad (\text{at } 298\text{K})
+\end{equation}
+Using the slope obtained from the semi log plots, the ideality factor for each device was calculated and tabulated.
+
+\begin{table}[H]
+    \centering
+    \caption{Slope and Ideality Factor from Semi-log Plot}
+    \label{tab:ideality}
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Device} & \textbf{Slope of Semi-log Plot} & \textbf{Ideality Factor} \\
+        \midrule
+        1N4007 Diode & $0.0139$ mV$^{-1}$ & $2.80$ \\
+        1N4148 Diode & $0.0058$ mV$^{-1}$ & $6.77$ \\
+        Base-Emitter Junction & $0.0048$ mV$^{-1}$ & $8.19$ \\
+        Base-Collector Junction & $0.0032$ mV$^{-1}$ & $12.08$ \\
+        IR LED & $0.0037$ mV$^{-1}$ & $10.66$ \\
+        Red LED & $0.0025$ mV$^{-1}$ & $15.48$ \\
+        Green LED & $0.0015$ mV$^{-1}$ & $25.88$ \\
+        Blue LED & $0.0138$ mV$^{-1}$ & $2.82$ \\
+        UV LED & $0.0010$ mV$^{-1}$ & $39.46$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Determination of Knee Voltage ($V_{knee}$)}
+The knee voltage was determined graphically as the voltage at which the current begins to increase significantly (interpolated at approx. $1$ mA for standard diodes). This voltage corresponds to the energy barrier required for charge carriers to cross the depletion region.It is tabulated below for each device.
+
+\begin{table}[H]
+    \centering
+    \caption{Knee Voltages for Tested Devices}
+    \label{tab:knee}
+    \begin{tabular}{lc}
+        \toprule
+        \textbf{Device} & \textbf{Knee Voltage (V)} \\
+        \midrule
+        1N4007 Diode & $0.585$ \\
+        1N4148 Diode & $0.585$ \\
+        Transistor B-E & $0.810$ \\
+        Transistor B-C & $0.570$ \\
+        IR LED & $1.900$ \\
+        Red LED & $1.800$ \\
+        Green LED & $2.145$ \\
+        Blue LED & $1.185$ \\
+        UV LED & $7.200$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Transistor Output Characteristics}
+The output characteristics of the transistor were plotted for various constant base currents ($I_B = 20 \mu A, 40 \mu A, 60 \mu A, 80 \mu A$). The plots show the collector current ($I_C$) as a function of collector-emitter voltage ($V_{CE}$). The active region, saturation region, and cutoff region were roughly identifiable from the plots, confirming the transistor's operation as a current-controlled amplifier.
+
+\section{Results}
+
+The calculated parameters for all tested devices are summarized in Table \ref{tab:results}.
+
+\begin{table}[H]
+    \centering
+    \caption{Experimental Results: Knee Voltages and Ideality Factors}
+    \label{tab:results}
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Device} & \textbf{Knee Voltage ($V$)} & \textbf{Ideality Factor ($\eta$)} \\
+        \midrule
+        1N4007 Diode        & 0.585 & 2.80 \\
+        1N4148 Diode        & 0.585 & 6.77 \\
+        Transistor B-E      & 0.810 & 8.19 \\
+        Transistor B-C      & 0.570 & 12.08 \\
+        IR LED              & 1.900 & 10.66 \\
+        Red LED             & 1.800 & 15.48 \\
+        Green LED           & 2.145 & 25.88 \\
+        Blue LED            & 1.185 & 2.82 \\
+        UV LED              & 7.200 & 39.46 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Conclusion}
+\begin{itemize}
+    \item The silicon diodes (1N4007 and 1N4148) exhibited typical rectifying behavior with a knee voltage of $0.585$ V, though their calculated ideality factors ($2.80$ and $6.77$) indicated non-ideal recombination effects.
+    \item The LED characteristics confirmed the direct relationship between bandgap energy and turn-on voltage, with knee voltages increasing as Red ($1.800$ V) $<$ Green ($2.145$ V) $<$ UV ($7.200$ V), though the IR LED showed a higher knee voltage ($1.900$ V) than Red and Blue showed a lower knee voltage ($1.185$ V) than green.
+    \item The transistor junctions functioned effectively as diodes, and the output characteristics verified the BJT's operation as a current-controlled amplifier with distinct saturation and active regions.
+\end{itemize}
+
+\end{document}

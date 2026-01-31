@@ -1,0 +1,187 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{caption}
+
+% Page Setup
+\geometry{margin=1in}
+
+\begin{document}
+
+% --- Title Page ---
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    
+    {\Huge \textbf{Moseley’s Law : K-absorption edge}\par}
+    
+    \vspace{1.5cm}
+    
+    {\Large Animesh Pradhan \\ 24551\par}
+    
+    \vspace{1.5cm}
+    
+    {\large \today\par}
+    
+    \vspace*{\fill}
+\end{titlepage}
+
+\section{Brief Introduction}
+Moseley’s Law states that the square root of the frequency of the characteristic x-rays emitted from an element is proportional to its atomic number. This relationship can be derived from Bohr’s model of the atom and is given by the equation:
+\begin{equation}
+E = Rhc(Z - \sigma)^2
+\end{equation}
+here, $E$ is the energy of the emitted x-ray, $R$ is the Rydberg constant, $h$ is Planck’s constant, $c$ is the speed of light, $Z$ is the atomic number of the element, and $\sigma$ is the screening constant that accounts for the shielding effect of inner electrons.
+\begin{equation}
+\sqrt{E} = \sqrt{Rhc}(Z - \sigma)
+\end{equation}
+
+\begin{equation}
+\sqrt{E} = \sqrt{Rhc}(Z) - \sqrt{Rhc}(\sigma)
+\end{equation}
+
+Thus, a graph plotting $\sqrt{E}$ vs. $Z$ should give a straight line with slope $= \sqrt{Rhc}$ and y-intercept $= -\sqrt{Rhc}(\sigma)$.
+
+To get $E$ from the experimental data, we use the relation between energy and wavelength of x-rays:
+\begin{equation}
+E = \frac{hc}{\lambda}
+\end{equation}
+where $\lambda$ is the wavelength of the x-ray, which can be determined using Bragg's law:
+\begin{equation}n\lambda = 2d \sin \theta
+\end{equation}
+here, $d$ is the distance between the crystal planes in the diffraction grating and $\theta$ is the angle of incidence at which the x-rays are diffracted.
+
+\section{Prelab}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/moseley's law/prelab/prelab_1.jpg}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/moseley's law/prelab/prelab_2.jpg}
+\end{figure}
+
+\section{Graphs}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphs/LiF_5mm_plot.png}
+    \caption{X-ray diffraction spectrum for Lithium Fluoride (LiF)}
+    \label{fig:lif5mm}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphs/Ag_plot.png}
+    \caption{X-ray diffraction spectrum for Silver (Ag)}
+    \label{fig:ag}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphs/Zn_plot.png}
+    \caption{X-ray diffraction spectrum for Zinc (Zn)}
+    \label{fig:zn}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphs/Sr_plot.png}
+    \caption{X-ray diffraction spectrum for Strontium (Sr)}
+    \label{fig:sr}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphs/Unown_plot.png}
+    \caption{X-ray diffraction spectrum for Unknown sample}
+    \label{fig:unown}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphs/moseley_law_plot.png}
+    \caption{Moseley's Law: $\sqrt{E}$ vs Atomic Number (Z)}
+    \label{fig:moseley}
+\end{figure}
+
+\section{Analysis}
+
+\subsection{X-Ray Spectrum}
+The X-ray spectra for control(only LiF), Ag, Zn, Sr and Unknown samples are shown in Figures \ref{fig:lif5mm}, \ref{fig:ag}, \ref{fig:zn}, \ref{fig:sr} and \ref{fig:unown} respectively. The K-absorption edge for each sample correspond to the dip in the count rate before the characteristic peaks. The angles corresponding to these edges are converted to wavelengths via Bragg's law and tabulated below:
+\[n\lambda = 2d \sin \theta \] here we use \(d = 201.4 pm\) for LiF crystal and \(n=1\).
+
+\begin{table}[H]
+\centering
+\caption{K-absorption edge data for different elements}
+\label{tab:absorption}
+\begin{tabular}{cccc}
+\hline
+\hline
+\textbf{Element (Z)} & \textbf{$\theta$ (°)} & \textbf{$\lambda$ (pm)} & \textbf{$\sqrt{E}$ (eV$^{1/2}$)} \\
+\hline
+Zn (30) & 18.4 & 127.1 & 98.8 \\
+Sr (38) & 10.7 & 74.8 & 128.8 \\
+Ag (47) & 6.8 & 47.7 & 161.3 \\
+Unknown & 9.8 & 68.6 & 134.5 \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Moseley’s Law Verification}
+Using the data from Table \ref{tab:absorption}, we plot $\sqrt{E}$ vs Atomic Number (Z) in Figure \ref{fig:moseley}. The linear fit to the data confirms Moseley's Law, with the slope and intercept providing values for $\sqrt{Rhc}$ and $-\sqrt{Rhc}(\sigma)$ respectively.
+
+According to the linear fit with uncertainties, we find:
+\[\sqrt{E} = (3.675 \pm 0.040)Z + (-11.25 \pm 1.55)\]
+with $R^2 = 0.9999$, indicating an excellent linear fit.
+
+\subsection{Determination of Unknown Element}
+
+Using the linear fit equation and the measured value of $\sqrt{E} = 134.5$ eV$^{1/2}$ for the unknown sample:
+
+\[Z_{\text{unknown}} = \frac{134.5 + 11.25}{3.675} = 39.7\]
+
+Rounding to the nearest integer, we obtain $Z = 40$, which corresponds to Zirconium (Zr). 
+
+
+\subsection{Rydberg and Screening Constants}
+
+From the linear fit, we have:
+\[\text{slope} = \sqrt{Rhc} = (3.675 \pm 0.040) \text{ eV}^{1/2}\]
+
+\[\Rightarrow R = (1.089 \pm 0.024) \times 10^7 \text{ m}^{-1}\]
+
+The theoretical Rydberg constant is $R_\infty = 1.097 \times 10^7$ m$^{-1}$, giving a percentage error of:
+\[\text{Error} = \frac{|1.089 - 1.097|}{1.097} \times 100\% = 0.73\%\]
+
+
+From the intercept of the linear fit:
+\[\text{intercept} = -\sqrt{Rhc} \cdot \sigma = (-11.25 \pm 1.55)\]
+\[\Rightarrow \sigma = \frac{11.25}{3.675} = 3.06 \pm 0.42\]
+
+This screening constant represents the effective shielding of the nuclear charge by inner electrons for K-shell transitions. 
+
+\subsection{Uncertainty Analysis}
+All the numerical and graphical uncertainties have been calculated using standard error propagation methods and mentioned alongside the respective values in the analysis.
+
+\section{Conclusion}
+
+In this experiment, Moseley's Law was successfully verified through X-ray diffraction measurements of K-absorption edges for various elements. The key findings are:
+
+\begin{itemize}
+    \item K-absorption edge angles measured: Zn (18.4°), Sr (10.7°), Ag (6.8°), Unknown (9.8°)
+    \item Linear relationship $\sqrt{E}$ vs Z confirmed with $R^2 = 0.9999$: $\sqrt{E} = (3.675 \pm 0.040)Z + (-11.25 \pm 1.55)$
+    \item Experimental Rydberg constant: $R = (1.089 \pm 0.024) \times 10^7$ m$^{-1}$
+    \item Percentage error from theoretical value ($R_\infty = 1.097 \times 10^7$ m$^{-1}$): 0.73\%
+    \item Screening constant: $\sigma = 3.06 \pm 0.42$.
+    \item Unknown element identified as Zirconium (Zr) with $Z = 40$
+\end{itemize}
+
+The excellent agreement between experimental and theoretical values validates Moseley's Law and demonstrates the effectiveness of X-ray spectroscopy for elemental identification.
+
+\end{document}
