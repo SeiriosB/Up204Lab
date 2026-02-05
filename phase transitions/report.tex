@@ -1,0 +1,299 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{siunitx}
+
+% Page Setup
+\geometry{margin=1in}
+
+\begin{document}
+
+% --- Title Page ---
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    
+    {\Huge \textbf{Clausius - Clapeyron Equation and Phase Transition}\par}
+    
+    \vspace{1.5cm}
+    
+    {\Large Animesh Pradhan \\ 24551\par}
+    
+    \vspace{1.5cm}
+    
+    {\large \today\par}
+    
+    \vspace*{\fill}
+\end{titlepage}
+
+
+\section{Prelab}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/phase transitions/prelab/1.jpg}
+\end{figure}
+
+\section{Data}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/phase transitions/data/1.jpg}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/phase transitions/data/2.jpg}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Experimental Data: Total Volume, Voltage, and Calculated Pressure}
+    \label{tab:experimental_data}
+    \vspace{0.2cm}
+    \begin{tabular}{S[table-format=2.2] S[table-format=-3.2] S[table-format=1.4]}
+        \toprule
+        {Total Volume} & {Voltage} & {Pressure} \\
+        {(\si{\milli\liter})} & {(\si{\milli\volt})} & {(\si{atm})} \\
+        \midrule
+        28.45 & -0.85 & 1.0000 \\
+        27.45 & 3.30 & 1.0364 \\
+        26.45 & 7.87 & 1.0756 \\
+        25.45 & 12.70 & 1.1179 \\
+        24.45 & 18.00 & 1.1636 \\
+        23.45 & 26.10 & 1.2132 \\
+        22.45 & 31.20 & 1.2673 \\
+        21.45 & 37.60 & 1.3263 \\
+        20.45 & 46.20 & 1.3912 \\
+        19.45 & 54.80 & 1.4627 \\
+        18.45 & 64.30 & 1.5420 \\
+        17.45 & 75.20 & 1.6304 \\
+        16.45 & 87.20 & 1.7295 \\
+        15.45 & 102.50 & 1.8414 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Experimental Data: Temperature, Voltage, and Calculated Pressure}
+    \label{tab:temp_pressure_data}
+    \vspace{0.2cm}
+    \begin{tabular}{S[table-format=2.1] S[table-format=2.1] S[table-format=1.4]}
+        \toprule
+        {Temperature} & {Voltage} & {Pressure} \\
+        {(\si{\degreeCelsius})} & {(\si{\milli\volt})} & {(\si{atm})} \\
+        \midrule
+        25.1 & -0.3 & 1.0085 \\
+        30.0 & 0.9 & 1.0184 \\
+        35.0 & 3.3 & 1.0381 \\
+        40.1 & 6.0 & 1.0602 \\
+        45.0 & 9.2 & 1.0864 \\
+        50.0 & 12.8 & 1.1160 \\
+        55.0 & 17.1 & 1.1512 \\
+        60.0 & 22.6 & 1.1963 \\
+        65.0 & 29.0 & 1.2488 \\
+        70.1 & 36.6 & 1.3111 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \caption{Calculated Vapor Pressure of the Liquid at Varying Temperatures}
+    \label{tab:vapor_pressure}
+    \begin{tabular}{
+        S[table-format=2.1]
+        S[table-format=3.2]
+        S[table-format=1.4]
+        S[table-format=1.4]
+        S[table-format=1.4]
+    }
+        \toprule
+        {Temp} & {Temp} & {Total Pressure} & {Air Pressure} & {Vapor Pressure} \\
+        {($^\circ$C)} & {(K)} & {($P_{\text{total}}$ / atm)} & {($P_{\text{air}}$ / atm)} & {($P_{\text{vapor}}$ / atm)} \\
+        \midrule
+        25.1 & 298.25 & 1.0085 & 0.9943 & 0.0142 \\
+        30.0 & 303.15 & 1.0184 & 1.0102 & 0.0082 \\
+        35.0 & 308.15 & 1.0381 & 1.0264 & 0.0117 \\
+        40.1 & 313.25 & 1.0602 & 1.0429 & 0.0173 \\
+        45.0 & 318.15 & 1.0864 & 1.0587 & 0.0277 \\
+        50.0 & 323.15 & 1.1160 & 1.0749 & 0.0411 \\
+        55.0 & 328.15 & 1.1512 & 1.0910 & 0.0602 \\
+        60.0 & 333.15 & 1.1963 & 1.1071 & 0.0892 \\
+        65.0 & 338.15 & 1.2488 & 1.1232 & 0.1256 \\
+        70.1 & 343.25 & 1.3111 & 1.1397 & 0.1714 \\
+        \bottomrule
+    \end{tabular}
+    
+    \vspace{0.2cm}
+    \small
+    \noindent \textbf{Note:} $P_{\text{air}}$ calculated using $V_{\text{air}}=300\text{ mL}$, $V_{\text{tube}}=8.45\text{ mL}$, and reference temperature 300 K.
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Data for Clausius-Clapeyron Plot}
+    \label{tab:clausius_clapeyron_data}
+    \vspace{0.2cm}
+    \begin{tabular}{S[table-format=1.6] S[table-format=-1.4]}
+        \toprule
+        {$1/T$} & {$\ln(P_{\text{vapor}})$} \\
+        {(\si{\per\kelvin})} & {} \\
+        \midrule
+        0.003353 & -4.2545 \\
+        0.003299 & -4.8030 \\
+        0.003245 & -4.4478 \\
+        0.003192 & -4.0571 \\
+        0.003143 & -3.5860 \\
+        0.003095 & -3.1916 \\
+        0.003047 & -2.8098 \\
+        0.003002 & -2.4167 \\
+        0.002957 & -2.0740 \\
+        0.002913 & -1.7630 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Graphs}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{/home/Animesh/phys_lab_sem4/up204/phase transitions/graphs/pressure_calibration.png}
+    \caption{Pressure Sensor Calibration: Pressure versus Voltage}
+    \label{fig:pressure_calibration}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{/home/Animesh/phys_lab_sem4/up204/phase transitions/graphs/pressure_vs_temperature.png}
+    \caption{Total Pressure versus Temperature}
+    \label{fig:pressure_vs_temperature}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{/home/Animesh/phys_lab_sem4/up204/phase transitions/graphs/vapor_pressure_vs_temperature.png}
+    \caption{Vapor Pressure versus Temperature}
+    \label{fig:vapor_pressure_vs_temperature}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{/home/Animesh/phys_lab_sem4/up204/phase transitions/graphs/clausius_clapeyron.png}
+    \caption{Clausius-Clapeyron Plot: $\ln(P_{\text{vapor}})$ versus $1/T$}
+    \label{fig:clausius_clapeyron}
+\end{figure}
+
+\section{Analysis}
+
+\subsection{Pressure Sensor Calibration}
+
+\noindent A piezoelectric sensor, which generates a voltage potential when subjected to mechanical stress, was employed to measure pressure. The experiment utilized a syringe to vary the volume of air under isothermal conditions.
+
+\vspace{1em}
+
+\noindent The syringe was initially calibrated to a volume of 20ml at atmospheric pressure, which was defined as 1atm. During the procedure, the air volume within the tube of the syringe was measured to be 8.45ml.
+
+\vspace{1em}
+
+\noindent For isothermal processes, the system follows Boyle's Law with reference state $V_0 = 28.45$ ml at $P_0 = 1$ atm:
+\[
+P = \frac{P_0 V_0}{V_{\text{total}}}
+\]
+
+\noindent Linear regression of the pressure-voltage data (Figure~\ref{fig:pressure_calibration}) yields the calibration equation:
+\[
+P = (1.011 \pm 0.002) + (8.20 \pm 0.05) \times 10^{-3}V \quad (R^2 = 0.9996)
+\]
+where $P$ is in atm and $V$ is in mV.
+
+\subsection{Total Pressure vs Temperature}
+Using the calibration equation, the total pressure was calculated for each voltage reading. The resulting pressure values are presented in Table~\ref{tab:temp_pressure_data} and plotted against the corresponding temperatures in Figure~\ref{fig:pressure_vs_temperature}.
+
+\subsection{Vapour Pressure vs Temperature}
+To get the vapour pressure, we use Dalton's law of partial pressures:
+\begin{align*}
+    P_{\text{total}} &= P_{\text{air}} + P_{\text{vapor}}
+\end{align*}
+
+\noindent The air pressure is given by:
+
+\begin{equation*}
+    P_{\text{air}} = P_0 \frac{\frac{V_{\text{air}}}{300} + \frac{V_{\text{tube}}}{300}}{\frac{V_{\text{air}}}{T} + \frac{V_{\text{tube}}}{300}}
+\end{equation*}
+
+This equation holds as only the air inside the container is heated, not the air in the tube. Here, $V_{\text{air}} = 550ml - 250ml = 300ml; V_{\text{tube}} = 8.45ml$; $P_0 = 1atm$; $T$ is the temperature in Kelvin.
+
+The vapour pressure is then calculated and tabulated against temperature in Table~\ref{tab:vapor_pressure}. It is then plotted in Figure~\ref{fig:vapor_pressure_vs_temperature}.
+
+\subsection{Clausius - Clapeyron Equation}
+\noindent The Clausius-Clapeyron equation states:
+\begin{equation*}
+    \frac{dP}{dT} = \frac{\Delta H}{T\Delta V}
+\end{equation*}
+where $H$ is the molar latent heat of vaporization and $\Delta V$ is the volume change upon vaporization approximated as $V_{\text{gas}}$.
+
+\noindent Using the ideal gas law $PV_{\text{gas}} = nRT$, the equation simplifies to:
+\begin{equation*}
+    \frac{dP}{dT} = \frac{HP}{nRT^2}
+\end{equation*}
+
+\vspace{1cm}
+
+\noindent Integrating from $(P_1, T_1)$ to $(P_2, T_2)$:
+\begin{equation*}
+    \ln \left(\frac{P_2}{P_1}\right) = \frac{\Delta H}{R} \left(\frac{1}{T_1} - \frac{1}{T_2}\right)
+\end{equation*}
+
+\noindent Rearranging with $P_1 = P_0$ and $T_1 = T_0$:
+\begin{equation*}
+    \ln P = -\frac{\Delta H}{RT} + \left(\frac{\Delta H}{RT_0} + \ln P_0\right)
+\end{equation*}
+
+So, the log of Vapor pressure and 1/Temperature data is tabulated in Table~\ref{tab:clausius_clapeyron_data} and plotted in Figure~\ref{fig:clausius_clapeyron}. Linear regression yields:
+\[
+\ln(P_{\text{vapor}}) = (18.18 \pm 2.08) + (-6886 \pm 664)\frac{1}{T} \quad (R^2 = 0.931)
+\]
+
+\noindent From the slope $m = -\frac{\Delta H_{\text{vap}}}{R}$, with $R = 8.314$ J/(mol$\cdot$K):
+\[
+\Delta H_{\text{vap}} = -mR = 57,251 \text{ J/mol}, \quad \delta(\Delta H_{\text{vap}}) = R \times \delta m = 5,520 \text{ J/mol}
+\]
+
+\begin{equation}
+\boxed{\Delta H_{\text{vap}} = 57.3 \pm 5.5 \text{ kJ/mol}}
+\end{equation}
+
+\section{Uncertainty Analysis}
+All the required uncertainties have been calculated and propagated according to the standard rules of error propagation. These have been included in the analysis above.
+The literature value of $\Delta H_{\text{vap}}$ for water is $40.65$ kJ/mol.
+So, the percentage error in our experimental value is:
+\[
+\text{Percentage Error} = \left|\frac{57.3 - 40.65}{40.65}\right| \times 100\% = 41.0\%
+\]
+\section{Critical Point of $SF_6$}
+The phase transition temperature for SF6 was recorded as:
+\begin{itemize}
+    \item Heating: $44.9$ $^\circ$C
+    \item Cooling: $45.5$ $^\circ$C
+    \item Average: $45.2$ $^\circ$C
+\end{itemize}
+
+\section{Conclusion}
+
+This experiment successfully investigated phase transitions and vapor pressure behavior:
+
+\begin{itemize}
+    \item Piezoelectric pressure sensor calibration: $P = (1.011 \pm 0.002) + (8.20 \pm 0.05) \times 10^{-3}V$ atm (R² = 0.9996)
+    \item Total pressure increased from 1.01 to 1.31 atm over temperature range 25-70°C
+    \item Vapor pressure calculated using Dalton's law ranged from 0.008 to 0.171 atm
+    \item Latent heat of vaporization from Clausius-Clapeyron analysis: $\Delta H_{\text{vap}} = 57.3 \pm 5.5$ kJ/mol
+    \item SF₆ critical point temperature: 45.2°C (average of heating and cooling cycles)
+    \item Percentage error compared to water's literature value (40.65 kJ/mol): 41.0\%
+\end{itemize}
+
+\end{document}
