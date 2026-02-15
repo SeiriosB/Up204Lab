@@ -1,0 +1,184 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{siunitx}
+
+% Page Setup
+\geometry{margin=1in}
+
+\begin{document}
+
+% --- Title Page ---
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    
+    {\Huge \textbf{Ferromagnetic Hysteresis}\par}
+    
+    \vspace{1.5cm}
+    
+    {\Large Animesh Pradhan \\ 24551\par}
+    
+    \vspace{1.5cm}
+    
+    {\large \today\par}
+    
+    \vspace*{\fill}
+\end{titlepage}
+
+
+\section{Prelab}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/ferromagnetic_hysteresis/prelab/1.jpg}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{/home/Animesh/phys_lab_sem4/up204/ferromagnetic_hysteresis/prelab/2.jpg}
+\end{figure}
+
+\section{Graphs}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphs/run1laminatediron_b_vs_i.png}
+    \caption{B vs I curve for Laminated Iron}
+    \label{fig:run1_laminated_iron}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphs/run1softiron_b_vs_i.png}
+    \caption{B vs I curve for Soft Iron}
+    \label{fig:run1_soft_iron}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphs/run1laminatediron_b_vs_h.png}
+    \caption{B vs H hysteresis curve for Laminated Iron}
+    \label{fig:run1_laminated_iron_bh}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{graphs/run1softiron_b_vs_h.png}
+    \caption{B vs H hysteresis curve for Soft Iron}
+    \label{fig:run1_soft_iron_bh}
+\end{figure}
+
+\section{Analysis}
+\subsection{Hysteresis Curves}
+The magnetic field strength $H$ is calculated using:
+\begin{equation*}
+    H = \frac{NI}{L}
+\end{equation*}
+where $N$ is the number of turns and $L$ is the length of the solenoid. Given:
+\begin{align*}
+    N &= 600 \\
+    L_{\text{non-laminated}} &= 232 \text{ mm} \\
+    L_{\text{laminated}} &= 244 \text{ mm}
+\end{align*}
+
+Using these values, $H$ is computed (in SI units) as:
+
+Non-laminated
+\begin{equation*}
+    H = 2586 I
+\end{equation*}
+
+Laminated
+\begin{equation*}
+    H = 2459 I
+\end{equation*}
+The B vs I curves are shown in Figures \ref{fig:run1_laminated_iron} and \ref{fig:run1_soft_iron}. Using the above formulas, the magnetic field strength H is computed and plotted against B in Figures \ref{fig:run1_laminated_iron_bh} and \ref{fig:run1_soft_iron_bh}.
+
+The area enclosed by the hysteresis loop represents the energy dissipated per unit volume per magnetization cycle. Using numerical integration, the areas under the B-H curves are calculated as:
+
+\begin{align*}
+    \text{Laminated Iron:} \quad & 306782 \text{ mT·A/m} = 306.8 \text{ J/m}^3 \\
+    \text{Soft Iron:} \quad & 196542 \text{ mT·A/m} = 196.5 \text{ J/m}^3
+\end{align*}
+
+It is important to note that the two materials were magnetized to different saturation levels during the experiment. The laminated iron reached a maximum flux density of approximately 583 mT, while the soft iron only reached 151 mT. The larger hysteresis area for laminated iron is primarily due to this higher saturation level rather than intrinsically higher losses. When normalized for the different B ranges, laminated iron (designed to reduce eddy current losses through lamination) would be expected to show lower specific losses than solid soft iron at comparable flux densities.
+
+\subsection{Remanence}
+The remanent magnetization (remanence) is the magnetic flux density remaining in the material when the external magnetic field is reduced to zero. On the hysteresis curve, there are two values of B when H = 0: one on the descending branch ($B_+$) and one on the ascending branch ($B_-$). The remanence is calculated as:
+\begin{equation*}
+    B_r = \frac{B_+ + |B_-|}{2}
+\end{equation*}
+
+From the B-H hysteresis curves, the values at H = 0 are determined by interpolation:
+
+\text{Laminated Iron:}
+\begin{align*}
+    B_+ &= 35.17 \text{ mT} \\
+    B_- &= -39.21 \text{ mT} \\
+    B_r &= \frac{35.17 + |-39.21|}{2} = 37.19 \pm 2.02 \text{ mT}
+\end{align*}
+
+\text{Soft Iron:}
+\begin{align*}
+    B_+ &= 43.07 \text{ mT} \\
+    B_- &= -46.63 \text{ mT} \\
+    B_r &= \frac{43.07 + |-46.63|}{2} = 44.85 \pm 1.78 \text{ mT}
+\end{align*}
+
+The soft iron exhibits higher remanence (44.85 mT) compared to laminated iron (37.19 mT), indicating that it retains more magnetization after the external field is removed.
+
+\subsection{Coercive Field Strength}
+The coercive field strength ($H_c$) is the value of the magnetic field strength H at which the magnetic flux density B becomes zero during the demagnetization process. On the hysteresis curve, there are two values of H when B = 0: one on the descending branch ($H_+$) and one on the ascending branch ($H_-$). The coercive field strength is calculated as:
+\begin{equation*}
+    H_c = \frac{H_+ + |H_-|}{2}
+\end{equation*}
+
+From the B-H hysteresis curves, the values at B = 0 are determined by interpolation:
+
+\text{Laminated Iron:}
+\begin{align*}
+    H_+ &= 133.28 \text{ A/m} \\
+    H_- &= -136.88 \text{ A/m} \\
+    H_c &= \frac{133.28 + |-136.88|}{2} = 135.08 \pm 1.80 \text{ A/m}
+\end{align*}
+
+\text{Soft Iron:}
+\begin{align*}
+    H_+ &= 449.96 \text{ A/m} \\
+    H_- &= -407.11 \text{ A/m} \\
+    H_c &= \frac{449.96 + |-407.11|}{2} = 428.54 \pm 21.43 \text{ A/m}
+\end{align*}
+
+The laminated iron exhibits significantly lower coercive field strength (135.08 A/m) compared to soft iron (428.54 A/m). 
+
+\subsection{Uncertainty Analysis}
+The uncertainty in $H$ is:
+\begin{equation*}
+    \frac{\Delta H}{H} = \frac{\Delta I}{I}
+\end{equation*}
+where $\Delta I = 0.001 \text{ A}$. Thus:
+\begin{equation*}
+    \Delta H = H \frac{\Delta I}{I} = \frac{N}{L} \Delta I
+\end{equation*}
+
+The uncertainty for B was calculated by taking its standard deviation.
+
+\section{Conclusion}
+
+This experiment successfully investigated the ferromagnetic hysteresis behavior of laminated iron and soft iron cores:
+
+\begin{itemize}
+    \item B-H curves were obtained for both materials, showing clear hysteresis loops with measured areas of 306.8 J/m³ for laminated iron and 196.5 J/m³ for soft iron. However, these were measured at different saturation levels (583 mT vs 151 mT), making direct comparison of energy losses inappropriate.
+    
+    \item Laminated iron showed remanence $B_r = 37.19 \pm 2.02$ mT, while soft iron exhibited $B_r = 44.85 \pm 1.78$ mT, indicating soft iron retains more magnetization after field removal.
+    
+    \item Laminated iron demonstrated significantly lower coercivity ($H_c = 135.08 \pm 1.80$ A/m) compared to soft iron ($H_c = 428.54 \pm 21.43$ A/m), confirming it is magnetically softer and requires less field to demagnetize.
+    
+    \item The combination of low coercivity and lamination (which reduces eddy currents) makes laminated iron superior for transformer cores and AC applications despite the higher experimental hysteresis area being primarily due to different saturation levels.
+\end{itemize}
+
+\end{document}
